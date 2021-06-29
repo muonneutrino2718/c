@@ -5,12 +5,16 @@
     <title></title>
     <style>
       *{list-style:none;
-      background-color:#f4f4f4;}
+       background-color:#f4f4f4;
+       text-decoration:none;}
+      body{font-family:"Hiragino Kaku Gothic ProN";}
+
       .body-title{text-align:center;
         margin:30px auto;
         line-height:15px;
         width:75px;
         border-bottom:2px solid #3cb4e4}
+      .body-title h1{font-weight:normal;}
       .body-title p{font-size:12px;
         margin-bottom:20px;}
 
@@ -19,13 +23,15 @@
         height:300px;}
       .faq-wrapper{}
       .faq-list{padding:30px;
-        height:400px;background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 30% 40% no-repeat;}
-      .faq-list li{background-color:white;
+        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 40% 50% no-repeat;}
+      .question{background-color:white;
         display:flex;
         height:50px;
         line-height:50px;
         margin:10px;}
-      .faq-list p{width:80%}
+      .faq-list p{width:90%;
+        background-color:white;
+        line-height:25px;}
       .q-mark{color:#3cb4e4;
         margin:0 20px;
         background-color:white;
@@ -39,28 +45,54 @@
         width:200px;
         height:50px;
         line-height:50px;
-        border-radius:3px;
         box-shadow:2px 2px 1px lightgray;}
-      .faq-btn p{background-color:#3cb4e4;
+      .faq-btn a{background-color:#3cb4e4;
+        color:white;
         text-align:center;
         font-size:20px;
         line-height:50px;
-        position:relative;}
+        border-radius:3px;
+        position:relative;
+        display:inline-block;
+        width:100%;}
+      .faq-btn:hover{opacity:0.8;
+        transition:0.2s;
+        transform:scale(1.03);}
       .faq-btn span{height:100%;
         position:absolute;
         background-color:#3cb4e4;
         left:65%;
         font-size:28px;
         line-height:55px;}
+      .plus-btn:hover{opacity:0.7;}
+      .plus-btn{color:black;}
+      .question:hover{opacity:0.7;
+        transition:0.2s;
+        transform:scale(1.01);
+        cursor:pointer;}
+      .faq-text{background-color:rgba(0,0,0,0)}
+      .question{background-color:white;}
+      .answer{height:40px;
+        line-height:40px;
+        display:none;
+        width:90%;
+        background-color:rgba(0,0,0,0);
+        margin:0 auto;}
+      .a-mark{color:#3cb4e4;
+        font-size:20px;
+        margin:0 20px;
+        float:left;
+        background-color:rgba(0,0,0,0)}
       @media (max-width:710px){
-      .width:710px;
-      .faq-list{font-size:15px;}
-      .faq-list li{height:80px;
-        word-break:break-all;
-        line-height:22px;
-        }
-      .faq-list p{background-color:white;}
-      }
+      .faq-list{font-size:15px;
+        height:970px;
+        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 60% 70% no-repeat;}
+      .faq-list li{height:150px;}
+      .faq-list p{background-color:white;
+        line-height:25px;}
+      .q-mark{line-height:60px;}
+      .plus-btn{line-height:140px;}
+    }
     </style>
   </head>
   <body>
@@ -71,20 +103,103 @@
     </div>
 
     <div class="body-faq">
+      <!--Q&A部分-->
       <div class="faq-wrapper">
         <ul class="faq-list">
-          <li><span class="q-mark">Q</span><p>大体の見積もり金額を電話で教えていただけますか？</p><span class="plus-btn">+</span></li>
-          <li><span class="q-mark">Q</span><p>もともと貼ってあるフィルムはいくらで剥がしてもらえますか？</p><span class="plus-btn">+</span></li>
-          <li><span class="q-mark">Q</span><p>途中でキャンセルもしくはフィルムの変更は可能ですか？</p><span class="plus-btn">+</span></li>
-          <li><span class="q-mark">Q</span><p>土日祝日でも施工していますか？</p><span class="plus-btn">+</span></li>
-          <li><span class="q-mark">Q</span><p>引っ越し後でもガラスフィルムの施工は可能ですか？</p><span class="plus-btn">+</span></li>
-          <li><span class="q-mark">Q</span><p>現物サンプルを見たいときにはどうすればいいですか？</p><span class="plus-btn">+</span></li>
-        </ul>
+
+          <li class="faq-text">
+            <div class="question">
+              <span class="q-mark">Q.</span><p>大体の見積もり金額を電話で教えていただけますか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+              <span class="a-mark">A.</span>回答をここに入力
+            </div>
+          </li>
+
+          <li class="faq-text">
+            <div class="question">
+              <span class="q-mark">Q.</span><p>もともと貼ってあるフィルムはいくらで剥がしてもらえますか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+            　<span class="a-mark">A.</span>回答をここに入力
+          　</div>
+          </li>
+
+          <li class="faq-text">
+            <div class="question">
+              <span class="q-mark">Q.</span><p>途中でキャンセルもしくはフィルムの変更は可能ですか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+            　<span class="a-mark">A.</span>回答をここに入力
+          　</div>
+          </li>
+
+          <li class="faq-text">
+            <div class="question">
+              <span class="q-mark">Q.</span><p>土日祝日でも施工していますか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+            　<span class="a-mark">A.</span>回答をここに入力
+          　</div>
+          </li>
+
+          <li class="faq-text">
+            <div class="question">
+              <span class="q-mark">Q.</span><p>引っ越し後でもガラスフィルムの施工は可能ですか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+            　<span class="a-mark">A.</span>回答をここに入力
+          　</div>
+          </li>
+
+          <li class="faq-text">
+            <div class="question">
+               <span class="q-mark">Q.</span><p>現物サンプルを見たいときにはどうすればいいですか？</p><a href="#"class="plus-btn">+</a>
+            </div>
+            <div class="answer">
+            　<span class="a-mark">A.</span>回答をここに入力
+          　</div>
+          </li>
+
+          </ul>
         <div class="faq-btn">
-          <p>Q&A<span class="arrow-right">⇀</span></p>
+          <!--Q&Aボタン-->
+          <a href="#">Q&A<span class="arrow-right">⇀</span></a>
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $('.faq-text').click(function(){
+      var $answer=$(this).find('.answer');
+      if($answer.hasClass('accordion')){
+        $answer.removeClass('accordion');
+        $answer.slideUp();
+        $(this).find('.plus-btn').text('+');
+      }
+      else{$answer.addClass('accordion');
+      $answer.slideDown();
+      $(this).find('.plus-btn').text('-');
 
+      }
+
+    });
+
+      $('header a').click(function(){
+        var navigation=$(this).attr('href');
+        var position=$(navigation).offset().top;
+        $('html,body').animate({'scrollTop':position},800);
+      });
+
+      $('.second-btn-open').click(function(){
+        $('.modal').fadeIn();
+
+      });
+
+      $('.second-btn-close').click(function(){
+        $('.modal').fadeOut();
+
+      });
+</script>
   </body>
 </html>
