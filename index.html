@@ -23,7 +23,7 @@
         height:300px;}
       .faq-wrapper{}
       .faq-list{padding:30px;
-        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 40% 50% no-repeat;}
+        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 400px 220px no-repeat;}
       .question{background-color:white;
         display:flex;
         height:50px;
@@ -85,13 +85,13 @@
         background-color:rgba(0,0,0,0)}
       @media (max-width:710px){
       .faq-list{font-size:15px;
-        height:970px;
-        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 60% 70% no-repeat;}
-      .faq-list li{height:150px;}
+        background:linear-gradient(to bottom right, #e2eef3 50%, transparent 50%) top left/ 160px 450px no-repeat;}
+      .question{height:100px;}
       .faq-list p{background-color:white;
         line-height:25px;}
       .q-mark{line-height:60px;}
-      .plus-btn{line-height:140px;}
+      .plus-btn{line-height:100px;}
+
     }
     </style>
   </head>
@@ -160,7 +160,6 @@
             　<span class="a-mark">A.</span>回答をここに入力
           　</div>
           </li>
-
           </ul>
         <div class="faq-btn">
           <!--Q&Aボタン-->
@@ -175,11 +174,11 @@
       if($answer.hasClass('accordion')){
         $answer.removeClass('accordion');
         $answer.slideUp();
-        $(this).find('.plus-btn').text('+');
+        $(this).find('.plus-btn').text('+').css('font-size','20px');
       }
       else{$answer.addClass('accordion');
       $answer.slideDown();
-      $(this).find('.plus-btn').text('-');
+      $(this).find('.plus-btn').text('-').css('font-size','30px');
 
       }
 
